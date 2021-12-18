@@ -1,15 +1,13 @@
-Total Fire Benders: <%= @all_fire_benders.count %>
+Total Fire Benders: <%= @benders.count %><hr>
 
-<% @benders.each do |bender| %>
+<% @benders.take(25).each do |bender| %>
   Name: <%= bender.name %><br>
-  Image: <% if params[:photo].present? %>
-    <%= bender.photo %>
-  <% end %>
+  Image: <img src=<%= bender.photoUrl %>><br>
   Affiliations: <%= bender.affiliation %><br>
   Enemies: <% bender.enemies.each do |enemy| %>
     <%= enemy %><br>
   <% end %>
   Allies: <% bender.allies.each do |ally| %>
     <%= ally %><br>
-  <% end %>
+  <% end %><hr>
 <% end %>

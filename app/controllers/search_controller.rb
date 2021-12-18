@@ -1,6 +1,5 @@
 class SearchController < ApplicationController
   def index
-    @benders = SearchFacade.airbender_details
-    @all_fire_benders = SearchFacade.total_benders
+    @benders = SearchFacade.airbender_details('Fire Nation')
   end
 end
