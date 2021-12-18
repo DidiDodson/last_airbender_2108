@@ -1,6 +1,6 @@
-Total Fire Benders: <%= @benders.count %><hr>
+Nation's Total Benders: <%= @benders.count %><hr>
 
-<% @benders.take(25).each do |bender| %>
+<% @first_25.each do |bender| %>
   <h4><%= bender.name %></h4>
   <% if bender.photoUrl != nil %>
     <img src=<%= bender.photoUrl %>><br>
